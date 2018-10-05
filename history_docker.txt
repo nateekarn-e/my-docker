@@ -221,3 +221,15 @@
   221  git add .
   222  git commit -m "add pg_hba"
   223  history > history_docker.txt
+  224  ll
+  225  cat history_docker.txt 
+  226  ll
+  227  git add .
+  228  git commit -m "add history"
+  229  git status
+  230  git --help
+  231  git show
+  232  git --help
+  233  git remote add origin https://github.com/nateekarn-e/my-docker.git
+  234  git push -u origin master
+  235  history > history_docker.txt
