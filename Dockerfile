@@ -6,7 +6,10 @@ RUN yum install -y wget bzip2 make gcc zlib-devel readline-devel &&\
     rm -f /postgresql-10.5.tar.bz2 &&\
     rm -rf /postgresql-10.5
 ENV PATH $PATH:/usr/local/pgsql/bin
-RUN useradd postgres &&\
-    mkdir /pg_data &&\
-    chown postgres:postgres /pg_data &&\
-    runuser postgres -c 'initdb /pg_data'
+RUN useradd postgres
+
+RUN yum install ruby net-tools vim nc -y
+COPY entrypoint.rb /entrypoint
+COPY postgresql.conf pg_hba.conf /
+CMD ["ruby","/entrypoint"]
+
