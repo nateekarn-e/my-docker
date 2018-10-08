@@ -1,0 +1,282 @@
+    1  ip a
+    2  ping 8.8.8.8
+    3  ping 192.168.21.69
+    4  exit
+    5  ping 192.168.21.76
+    6  sudo apt-get update
+    7  apt-get install
+    8  sudo apt-get install
+    9  sudo apt-get install     apt-transport-https     ca-certificates     curl     software-properties-common
+   10  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+   11  ll
+   12  sudo apt-key fingerprint 0EBFCD88
+   13  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   14     $(lsb_release -cs) \
+   15     stable"
+   16  sudo apt-get update
+   17  sudo apt-get install docker-ce
+   18  sudo docker run hello-world
+   19  sudo docker version
+   20  cd /etc/docker/
+   21  sudo su -
+   22  ip a
+   23  cat /etc/passwd
+   24  exit
+   25  echo $DOCKER_HOST
+   26  sudo su -
+   27  exit
+   28  sudo su -
+   29  exit
+   30  ll /home
+   31  su -
+   32  sudo su -
+   33  ll
+   34  history
+   35  export DOCKER_HOST=tcp://127.0.0.1:2376
+   36  docker info
+   37  mkdir MyDocker
+   38  cd MyDocker/
+   39  ll
+   40  vi Dockerfile
+   41  ll
+   42  docker build -t prod:3.0.1
+   43  vi Dockerfile 
+   44  docker build -t prod:3.0.1 .
+   45  docker images
+   46  docker inspect 72518d35c41c
+   47  vi Dockerfile 
+   48  docker build prod:3.0.2 .
+   49  docker build -t prod:3.0.2 .
+   50  docker images
+   51  docker inspect 4536b21b9ab8
+   52  docker images
+   53  docker run -it --name=test_v3.0.2 --rm prod:3.0.2 bash
+   54  ls -la
+   55  cd
+   56  vi .bashrc
+   57  source .bashrc 
+   58  to_rwc 
+   59  docker info
+   60  vi .bashrc 
+   61  source --help
+   62  source .bashrc 
+   63  to_scv 
+   64  docker info
+   65  echo $DOCKER_HOST
+   66  vi .bashrc 
+   67  source .bashrc 
+   68  to_local 
+   69  docker info
+   70  echo $DOCKER_HOST
+   71  source .bashrc 
+   72  to_local 
+   73  docker info
+   74  vi .bashrc 
+   75  source .bashrc 
+   76  to_local 
+   77  docker info
+   78  exit
+   79  sudo su -
+   80  exit
+   81  docker ps
+   82  sudo su -
+   83  exit
+   84  poweroff
+   85  docker ps -a
+   86  ll
+   87  cd pg10
+   88  docker cp 653f41cb3e40 /pg_data/postgresql.conf .
+   89  docker cp 653f41cb3e40:/pg_data/postgresql.conf .
+   90  ll
+   91  ps -ef |grep postgre
+   92  docker ps -a
+   93  docker exec 7999c9e473e2 ps -ef
+   94  docker stop 799
+   95  docker ps -a
+   96  netstat -an |grep LISTEN
+   97  history
+   98  docker exec mypg bash
+   99  ll
+  100  exit
+  101  ll
+  102  cd pg10/
+  103  ll
+  104  docker ps
+  105  docker cp mypg:/pg_data/pg_hba.conf .
+  106  ll
+  107  vi pg_hba.conf 
+  108  docker ps
+  109  docker exec -it mypg bash
+  110  hostname
+  111  which git
+  112  which ls
+  113  which which
+  114  git status
+  115  docker info
+  116  docker info --help
+  117  cd /etc/docker/
+  118  ll
+  119  pwd
+  120  ll
+  121  cd MyDocker/
+  122  ll
+  123  cd ..
+  124  ll
+  125  docker images
+  126  docker ps -a
+  127  docker run -it centos:7 bash
+  128  ll
+  129  mkdir pg10
+  130  cd pg1
+  131  cd pg10
+  132  ll
+  133  vi Dockerfile
+  134  ll
+  135  git init
+  136  git add .
+  137  git commit -m "initial"
+  138  git config --global user.email "nateekarn@angstromsolutions.net"
+  139  git config --global user.name "nateekarn-e"
+  140  git commit -m "initial"
+  141  vi Dockerfile 
+  142  docker build -t pg10 .
+  143  vi Dockerfile 
+  144  docker build -t pg10 .
+  145  vi Dockerfile 
+  146  docker build -t pg10 .
+  147  vi Dockerfile 
+  148  pwd
+  149  mkdir temp
+  150  vi Dockerfile 
+  151  docker build -t PG10 .
+  152  docker build -t pg10 .
+  153  ll
+  154  ll temp/
+  155  docker images
+  156  docker run -it --rm pg10 bash
+  157  docker ps -a
+  158  docker images
+  159  df -h
+  160  ll
+  161  ll temp/
+  162  vi Dockerfile 
+  163  docker build -t pg10 .
+  164  docker run -it --rm pg10 bash
+  165  docker ps -a
+  166  vi Dockerfile 
+  167  docker build -t pg10 .
+  168  vi Dockerfile 
+  169  docker build -t pg10 .
+  170  docker run -it --rm pg10 bash
+  171  vi Dockerfile 
+  172  docker build -t pg10 .
+  173  vi Dockerfile 
+  174  docker build -t pg10 .
+  175  docker images
+  176  df
+  177  vi Dockerfile 
+  178  docker build -t pg10 .
+  179  docker run -it --rm pg10 bash
+  180  vi Dockerfile 
+  181  docker build -t pg10 .
+  182  vi Dockerfile 
+  183  docker build -t pg10 .
+  184  docker run -it --rm pg10 bash
+  185  git commit -m "pg10"
+  186  docker run -it --rm pg10 bash
+  187  git add .
+  188  git commit -m "pg10 v1"
+  189  ll
+  190  vi Dockerfile 
+  191  docker build -t pg10 .
+  192  docker run -it --rm pg10 bash
+  193  docker ps -a
+  194  date
+  195  vi Dockerfile 
+  196  docker images
+  197  docker rm $(docker ps -aq)
+  198  docker ps -a
+  199  git add .
+  200  git commit -m "after start postgres"
+  201  vi Dockerfile 
+  202  vi entrypoint.rb
+  203  ll
+  204  docker ps
+  205  docker ps -a
+  206  docker run -it pg10 bash
+  207  ll
+  208  vi Dockerfile 
+  209  cat Dockerfile 
+  210  ll entrypoint.rb
+  211  docker build -t pg10 .
+  212  vi Dockerfile 
+  213  ll
+  214  docker build -t pg10 .
+  215  docker run -it --rm pg10 bash
+  216  docker run --rm pg10
+  217  ll
+  218  vi postgresql.conf 
+  219  docker build -t pg10 .
+  220  docker ps -a
+  221  docker run --name mypg pg10
+  222  docker run --name mypg -p 25432:5432 pg10
+  223  docker ps -a
+  224  docker rm mypg
+  225  docker ps -a
+  226  docker rm 653
+  227  docker ps -a
+  228  docker run --name mypg -p 25432:5432 pg10
+  229  id
+  230  hostname
+  231  docker run -p 80:80 -e "PGADMIN_DEFAULT_EMAIL=user@domain.com" -e "PGADMIN_DEFAULT_PASSWORD=SuperSecret" -d dpage/pgadmin4
+  232  netstat -an |grep :80 |more
+  233  docker run --name mypg -p 25432:5432 pg10
+  234  docker ps -a
+  235  docker ps
+  236  docker ps -a
+  237  docker rm mypg
+  238  docker run --name --rm  mypg -p 25432:5432 pg10
+  239  docker run --name mypg --rm -p 25432:5432 pg10
+  240  vi Dockerfile 
+  241  docker build -t pg10 .
+  242  docker run --rm --name mypg pg10
+  243  history
+  244  docker run --name mypg --rm -p 25432:5432 pg10
+  245  vi entrypoint.rb 
+  246  docker build -t pg10 .
+  247  docker run --name mypg --rm -p 25432:5432 pg10
+  248  docker run --name mypg --rm -p 25432:5432 pg10
+  249  git add .
+  250  git commit -m "add pg_hba"
+  251  history > history_docker.txt
+  252  ll
+  253  cat history_docker.txt 
+  254  ll
+  255  git add .
+  256  git commit -m "add history"
+  257  git status
+  258  git --help
+  259  git show
+  260  git --help
+  261  git remote add origin https://github.com/nateekarn-e/my-docker.git
+  262  git push -u origin master
+  263  history > history_docker.txt
+  264  cat history_docker.txt 
+  265  git add .
+  266  git commit -m "add git remote"
+  267  git push origin master
+  268  git push -u nateekarn-e origin master
+  269  git push -u origin master
+  270  exit
+  271  poweroff
+  272  ip a
+  273  exit
+  274  docker network create net2
+  275  docker network list
+  276  docker inspect net2
+  277  docker run -it --rm --name=D2 --net=net2 centos:7 bash
+  278  docker run -it --rm --name=D2 --net=net1 centos:7 bash
+  279  ll
+  280  cd pg10/
+  281  ll
+  282  history > history_docker2.txt
