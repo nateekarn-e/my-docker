@@ -1,0 +1,8 @@
+{
+	"hosts":["tcp://0.0.0.0:2376"],
+	"labels":["angs-host=NTE"],
+	"tlsverify": true,
+        "tlscacert":"/etc/docker/pki/ca.crt",
+	"tlscert":"/etc/docker/pki/docker-training-server.crt",
+	"tlskey":"/etc/docker/pki/docker-training-server.key"
+}
